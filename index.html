@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gridnine</title>
+  <meta name="description" content="Gridnine">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 9'><g fill='%236366f1'><rect x='0' y='0' width='2.5' height='2.5'/><rect x='3.25' y='0' width='2.5' height='2.5'/><rect x='6.5' y='0' width='2.5' height='2.5'/><rect x='0' y='3.25' width='2.5' height='2.5'/><rect x='3.25' y='3.25' width='2.5' height='2.5'/><rect x='6.5' y='3.25' width='2.5' height='2.5'/><rect x='0' y='6.5' width='2.5' height='2.5'/><rect x='3.25' y='6.5' width='2.5' height='2.5'/><rect x='6.5' y='6.5' width='2.5' height='2.5'/></g></svg>">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111827;
+      --muted: #6b7280;
+      --accent: #6366f1;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0b0d12; --fg: #f3f4f6; --muted: #9ca3af; --accent: #818cf8; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 16px;
+    }
+    main { text-align: center; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 28px);
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .grid span {
+      width: 28px; height: 28px;
+      border-radius: 6px;
+      background: var(--accent);
+      opacity: .9;
+    }
+    .grid span:nth-child(even) { opacity: .45; }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -0.02em; }
+    p { margin: 0; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="grid" aria-hidden="true">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+    <h1>Gridnine</h1>
+    <p>Coming soon.</p>
+  </main>
+</body>
+</html>
